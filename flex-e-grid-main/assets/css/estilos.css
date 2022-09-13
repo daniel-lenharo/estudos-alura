@@ -108,7 +108,7 @@ body {
 
 .titulo-pagina {
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 .cartao {
@@ -116,19 +116,28 @@ body {
     border-radius: 15px;
     overflow: hidden;
     background-color: #2C343A;
-}#
+}
 
 .cartao__conteudo {
     padding: 16px;
-    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+
+.cartao__destaque {
+    grid-column: span 2;
+}
+
 .cartao__titulo {
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 700;
+    grid-column: span 2;
 }
+
 .cartao__perfil {
     color: #95999C;
     font-size: 0.9rem;
+    grid-column: span 2;
 }
 
 .cartao__info {
@@ -137,13 +146,14 @@ body {
     color: #95999C;
 }
 
-.cartao__info--tempo {
+.cartao__info--tempo::before {
     content: "\e90c";
-    margin-right: 8px;
+    margin-right: 8px;    
 }
-.cartao__info--visualizacao {
+
+.cartao__info--visualizacao::before {
     content: "\e90f";
-    margin-right: 8px;
+    margin-right: 8px;    
 }
 
 .cartao__botao {
@@ -160,12 +170,13 @@ body {
 .cartao__botao--play::before {
     content: "\e90b";
     font-size: 24px;
-
 }
 
 .cartao__botao--destaque {
     width: 100%;
+    grid-column: span 2;
 }
+
 .cartao__botao--destaque::before {
     margin-right: 8px;
 }
